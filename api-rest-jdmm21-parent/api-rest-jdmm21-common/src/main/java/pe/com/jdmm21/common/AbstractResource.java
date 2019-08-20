@@ -2,6 +2,8 @@ package pe.com.jdmm21.common;
 
 import java.util.List;
 
+import pe.com.jdmm21.exception.condition.RestPreCondition;
+
 public abstract class AbstractResource<T> {
 
 	public  List<T> findAllResource(){

@@ -9,7 +9,6 @@ public class AbstractService<T> implements IOperation<T> {
 	IRepository<T> irepository;
 
 	public List<T> findAll() {
-		// TODO Auto-generated method stub
 		return irepository.findAll();
 	}
 
