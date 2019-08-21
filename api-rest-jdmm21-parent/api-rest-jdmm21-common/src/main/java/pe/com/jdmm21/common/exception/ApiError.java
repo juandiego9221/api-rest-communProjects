@@ -1,4 +1,4 @@
-package pe.com.jdmm21.exception;
+package pe.com.jdmm21.common.exception;
 
 public class ApiError {
 
