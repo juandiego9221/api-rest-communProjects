@@ -37,7 +37,13 @@ public class AbstractService<T> implements IOperation<T> {
 	}
 
 	public T findById(Long id) {
-		return irepository.findById(id).orElseThrow(() -> new RuntimeException());
+//		return irepository.findById(id).orElseThrow(() -> new RuntimeException());
+		return irepository.findById(id).get();
+
+	}
+	
+	public boolean  findOne(Long id) {
+		return irepository.findById(id).isPresent();
 	}
 
 }

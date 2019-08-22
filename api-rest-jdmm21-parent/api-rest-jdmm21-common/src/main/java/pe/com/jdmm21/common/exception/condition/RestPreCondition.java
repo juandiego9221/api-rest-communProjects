@@ -1,7 +1,7 @@
 package pe.com.jdmm21.common.exception.condition;
 
 import pe.com.jdmm21.common.exception.ApiRestBadRequestException;
-import pe.com.jdmm21.common.utilitario.Utilitario;
+import pe.com.jdmm21.common.exception.ApiRestResourceNotFoundException;
 
 public class RestPreCondition {
 
@@ -14,10 +14,10 @@ public class RestPreCondition {
 			throw new ApiRestBadRequestException(message);
 		}
 	}
-
-	public static void checkIfPathRequestExist(final String id) {
-		if (Utilitario.validarValorVacioONulo(id)) {
-			throw new ApiRestBadRequestException("Debe ingresar id");
+	
+	public static void checkIfResourceExists(final boolean expression,final String message) {
+		if(expression) {
+			throw new ApiRestResourceNotFoundException(message);
 		}
 	}
 

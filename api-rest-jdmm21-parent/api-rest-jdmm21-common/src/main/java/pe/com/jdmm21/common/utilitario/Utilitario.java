@@ -15,8 +15,10 @@ public class Utilitario {
 		return false;
 	}
 	
-	public static boolean validarValorVacioONulo(String valor) {
+	public static boolean validarValorVacioONulo(Object valor) {
 		return (valor.equals(Constantes.VALOR_VACIO)||valor==null);
 	}
+	
 
+	
 }
